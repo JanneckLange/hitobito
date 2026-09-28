@@ -12,6 +12,7 @@ class EventDescriptionAsRichText < ActiveRecord::Migration[8.0]
   end
 
   def down
+    ActiveRecord::Base.connection.clear_cache!
     ActionText::RichText
       .where(record_type: "Event::Translation", name: "description").find_each do |action_text|
       translation = action_text.record
