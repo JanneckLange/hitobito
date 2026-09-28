@@ -173,7 +173,8 @@ content_inactivity_block_warning_body:
     TBD auf [#{Settings.application.name}]
 
 top_course_de_description:
-  record: top_course_de (Event::Translation)
+  record_id: <%= ActiveRecord::FixtureSet.identify(:top_course_de) %>
+  record_type: Event::Translation
   name: description
   body: Some kind of course, it seems
 

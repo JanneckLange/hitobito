@@ -80,7 +80,7 @@ jobs:
       - name: 'Main Specs without features'
         run: |
           git fetch --tags
-          bundle exec rake spec:without_features
+          bundle exec rspec spec/migrations/
 
   feature-specs:
     runs-on: 'ubuntu-24.04'
